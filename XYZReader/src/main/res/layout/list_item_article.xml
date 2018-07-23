@@ -1,0 +1,51 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/card_inside_margin"
+    android:layout_marginLeft="@dimen/card_inside_margin"
+    android:layout_marginRight="@dimen/card_inside_margin"
+    android:layout_marginTop="@dimen/card_inside_margin"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--suppress AndroidLintContentDescription -->
+        <com.example.xyzreader.ui.DynamicHeightNetworkImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@color/photo_placeholder"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/article_title"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/card_inside_text_padding"
+            android:paddingRight="@dimen/card_inside_text_padding"
+            android:paddingTop="@dimen/card_inside_text_padding"
+            android:textColor="@color/colorTitle" />
+
+        <TextView
+            android:id="@+id/article_subtitle"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/card_inside_text_padding"
+            android:paddingRight="@dimen/card_inside_text_padding"
+            android:paddingBottom="@dimen/card_inside_text_padding"
+            android:textColor="@color/colorSubtitle" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
